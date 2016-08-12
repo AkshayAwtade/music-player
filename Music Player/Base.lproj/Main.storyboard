@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +17,102 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0wf-WK-nDi">
+                                <rect key="frame" x="158" y="420" width="284" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9m-5e-j7i">
+                                        <rect key="frame" x="0.0" y="0.0" width="142" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IcE-cY-TUm">
+                                        <rect key="frame" x="140" y="0.0" width="146" height="31"/>
+                                        <connections>
+                                            <action selector="sliderDurationVAlueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="zaa-Ab-9I6"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0wf-WK-nDi" secondAttribute="height" multiplier="142:15" id="iu8-UG-MXK"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Cd8-m2-tFE">
+                                <rect key="frame" x="158" y="501" width="380" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Volume" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfc-Ws-A9O">
+                                        <rect key="frame" x="0.0" y="0.0" width="190" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jFQ-0C-XuR">
+                                        <rect key="frame" x="188" y="0.0" width="194" height="41"/>
+                                        <connections>
+                                            <action selector="sliderVolumeValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="pm1-bk-G6R"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Cd8-m2-tFE" secondAttribute="height" multiplier="142:15" id="TH5-6R-pec"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TJZ-Fh-JcH">
+                                <rect key="frame" x="268" y="340" width="64" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2l-Hf-WFH">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="30"/>
+                                        <state key="normal" title="Play"/>
+                                        <connections>
+                                            <action selector="buttonPlayPauseTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Qs-4H-4yZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyR-DE-8Lq">
+                                        <rect key="frame" x="32" y="0.0" width="32" height="30"/>
+                                        <state key="normal" title="Stop"/>
+                                        <connections>
+                                            <action selector="ButtonStopTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tOT-Ya-08V"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d0B-Ti-v8n">
+                                <rect key="frame" x="300" y="93" width="0.0" height="197"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fy4-0Q-J2D">
+                                <rect key="frame" x="158" y="106" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.018377726510000001" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Fy4-0Q-J2D" secondAttribute="height" multiplier="15:8" id="UIh-do-79F"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.68896246031730302" blue="0.86757635713582526" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="F9m-5e-j7i" firstAttribute="top" secondItem="TJZ-Fh-JcH" secondAttribute="bottom" constant="50" id="4gA-yc-HXK"/>
+                            <constraint firstItem="Fy4-0Q-J2D" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="86" id="B7h-b4-fe2"/>
+                            <constraint firstItem="Cd8-m2-tFE" firstAttribute="width" secondItem="Cd8-m2-tFE" secondAttribute="height" multiplier="142:15" id="DRM-yH-PEv"/>
+                            <constraint firstItem="d0B-Ti-v8n" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="73" id="DUP-Rk-uwR"/>
+                            <constraint firstItem="F9m-5e-j7i" firstAttribute="top" secondItem="Fy4-0Q-J2D" secondAttribute="bottom" constant="120" id="DVM-gG-Z76"/>
+                            <constraint firstItem="Cd8-m2-tFE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="481" id="LZC-1G-2hT"/>
+                            <constraint firstItem="TJZ-Fh-JcH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mf1-2E-sHR"/>
+                            <constraint firstItem="Fy4-0Q-J2D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nmb-vQ-Beh"/>
+                            <constraint firstItem="O2l-Hf-WFH" firstAttribute="top" secondItem="d0B-Ti-v8n" secondAttribute="bottom" constant="50" id="Xr2-eM-tZR"/>
+                            <constraint firstItem="d0B-Ti-v8n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fBe-ty-3Zg"/>
+                            <constraint firstItem="0wf-WK-nDi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="400" id="hhg-Wq-q0j"/>
+                            <constraint firstItem="0wf-WK-nDi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rgi-bG-fVi"/>
+                            <constraint firstItem="Cd8-m2-tFE" firstAttribute="top" secondItem="IcE-cY-TUm" secondAttribute="bottom" constant="51" id="tpJ-Vv-lwo"/>
+                            <constraint firstItem="TJZ-Fh-JcH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="320" id="xRj-30-IBE"/>
+                            <constraint firstItem="Cd8-m2-tFE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xgb-SW-MLd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ImagePredefined" destination="Fy4-0Q-J2D" id="zBf-gh-xOc"/>
+                        <outlet property="buttonPlayPause" destination="O2l-Hf-WFH" id="fgH-BA-pH7"/>
+                        <outlet property="sliderDurationValueChanged" destination="IcE-cY-TUm" id="8eM-5f-pZJ"/>
+                        <outlet property="sliderVolume" destination="jFQ-0C-XuR" id="gYm-Yg-6mK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -13,6 +13,9 @@
 		6F780B161D59EBF1002406B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F780B141D59EBF1002406B2 /* Main.storyboard */; };
 		6F780B181D59EBF1002406B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F780B171D59EBF1002406B2 /* Assets.xcassets */; };
 		6F780B1B1D59EBF1002406B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F780B191D59EBF1002406B2 /* LaunchScreen.storyboard */; };
+		6F780B281D5A0759002406B2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F780B271D5A0759002406B2 /* AVFoundation.framework */; };
+		6F780B2A1D5A0900002406B2 /* Mitwaa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6F780B291D5A0900002406B2 /* Mitwaa.mp3 */; };
+		6F780B2C1D5A16D5002406B2 /* Cosmos03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F780B2B1D5A16D5002406B2 /* Cosmos03.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		6F780B171D59EBF1002406B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F780B1A1D59EBF1002406B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F780B1C1D59EBF1002406B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F780B271D5A0759002406B2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6F780B291D5A0900002406B2 /* Mitwaa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mitwaa.mp3; sourceTree = "<group>"; };
+		6F780B2B1D5A16D5002406B2 /* Cosmos03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Cosmos03.jpg; path = "../../../../../../Library/Screen Savers/Default Collections/3-Cosmos/Cosmos03.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F780B281D5A0759002406B2 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,7 @@
 		6F780AFF1D59EBF1002406B2 = {
 			isa = PBXGroup;
 			children = (
+				6F780B271D5A0759002406B2 /* AVFoundation.framework */,
 				6F780B0A1D59EBF1002406B2 /* Music Player */,
 				6F780B091D59EBF1002406B2 /* Products */,
 			);
@@ -58,7 +66,9 @@
 		6F780B0A1D59EBF1002406B2 /* Music Player */ = {
 			isa = PBXGroup;
 			children = (
+				6F780B2B1D5A16D5002406B2 /* Cosmos03.jpg */,
 				6F780B0E1D59EBF1002406B2 /* AppDelegate.h */,
+				6F780B291D5A0900002406B2 /* Mitwaa.mp3 */,
 				6F780B0F1D59EBF1002406B2 /* AppDelegate.m */,
 				6F780B111D59EBF1002406B2 /* ViewController.h */,
 				6F780B121D59EBF1002406B2 /* ViewController.m */,
@@ -138,7 +148,9 @@
 			files = (
 				6F780B1B1D59EBF1002406B2 /* LaunchScreen.storyboard in Resources */,
 				6F780B181D59EBF1002406B2 /* Assets.xcassets in Resources */,
+				6F780B2C1D5A16D5002406B2 /* Cosmos03.jpg in Resources */,
 				6F780B161D59EBF1002406B2 /* Main.storyboard in Resources */,
+				6F780B2A1D5A0900002406B2 /* Mitwaa.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +314,7 @@
 				6F780B211D59EBF1002406B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
